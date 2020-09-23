@@ -1,6 +1,7 @@
-TOPTARGETS := build clean run
+build:
+	@$(MAKE) -I ..\include $(MAKECMDGOALS) -f makefile.mk --no-print-directory
 
-$(TOPTARGETS):
+%:
 	@$(MAKE) -I ..\include $(MAKECMDGOALS) -f makefile.mk --no-print-directory
 
 .PHONY: $(TOPTARGETS)

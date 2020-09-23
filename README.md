@@ -8,6 +8,8 @@
 
 [Bochs](http://bochs.sourceforge.net/) v2.6.11
 
+[QEMU](https://qemu.weilnetz.de/) v5.1.0
+
 ## Build
 ```
 make build

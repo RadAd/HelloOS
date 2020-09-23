@@ -12,7 +12,7 @@ RM=if exist $(1) del $(1)
 
 %.bin: %.obj
 	$(call msg,$@,$^)
-	$(LINK) $(LINK_OPTIONS) $<,$@,,,,
+	$(LINK) $(LINK_OPTIONS) $^,$@,,,,
 	
 %.img:
 	$(call msg,$@,$^)

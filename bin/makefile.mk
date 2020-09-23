@@ -7,8 +7,13 @@ include rules.mk
 build: hello.img
 	$(call msg,$@,$^)
 	
-run: build
+run: build run_qemu
+
+run_bochs:
 	bochs.exe -q
+
+run_qemu:
+	qemu-system-x86_64 -fda hello.img
 	
 boot.obj: bpb.inc
 boot.obj: DEFINES+=/D WITH_BPB
